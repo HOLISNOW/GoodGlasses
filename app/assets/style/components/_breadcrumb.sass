@@ -1,0 +1,26 @@
+// 麵包屑導覽列
+.breadcrumb
+  display: flex
+  padding: 8px 0
+
+// li 容器
+.breadcrumb_item
+  +font(16px, 1.5)
+  a
+    color: $color-dark
+    &:hover
+      color: $color-primary
+
+  &::after
+    content: '/'
+    margin-right: 2px
+
+  +pad
+    +font(14px, 1.715)
+  +mobile
+    line-height: 1.5
+
+.breadcrumb_item:last-child
+  color: $color-primary
+  &::after
+    content: ''
